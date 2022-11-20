@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>99乘法表</title>
+    <style>
+        table {
+            margin-right: auto;
+            margin-left: auto;
+            width: 700px;
+            height: 400px;
+            margin-bottom: 10px;
+            text-align: center;
+            border-collapse: collapse;
+        }
+        tr, td {
+            background-color:transparent;
+            border: 1px solid #000000;
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+</body>
+<script>
+    var box = document.querySelector('.box');
+    var table = document.createElement('table');
+    for( var i = 1; i <= 9; i++ ) {
+        var tr = document.createElement('tr');
+        for( var j = 1; j <= i; j++ ) {
+            var td = document.createElement('td');
+            td.innerText = j + '*' + i + '=' + i*j;
+            tr.append( td );
+        }
+        table.append( tr );
+    }
+    box.append(table);
+
+</script>
+</body>
+</html>
